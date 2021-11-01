@@ -19,7 +19,7 @@ class Movies_ExpTests: XCTestCase {
 
     func testGetMoviesWithExpectedURLHostAndPath() {
         let apiRespository = APIRepository()
-        let mockURLSession = MockURLSession()
+        let mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
         apiRespository.session = mockURLSession
         apiRespository.getMovies { movies, error in  }
         XCTAssertEqual(mockURLSession.cachedURL?.host, "mymovieslist.com")
@@ -27,8 +27,9 @@ class Movies_ExpTests: XCTestCase {
     }
     
     func testGetMoviesSuccessReturnsMovies() {
+        let jsonData = "[{\"title\": \"Mission Impossible Fallout\",\"detail\": \"A Tom Cruise Movie\"}]".data(using: .utf8)
       let apiRespository = APIRepository()
-      let mockURLSession  = MockURLSession()
+        let mockURLSession  = MockURLSession(data: jsonData, urlResponse: nil, error: nil)
       apiRespository.session = mockURLSession
       let moviesExpectation = expectation(description: "movies")
       var moviesResponse: [Movie]?

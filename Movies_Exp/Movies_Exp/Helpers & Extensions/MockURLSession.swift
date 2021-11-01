@@ -11,7 +11,7 @@ import UIKit
 class MockURLSession: URLSession {
     // SHAK: Properties
     var cachedURL: URL?
-    private let mockTask: MockTask
+    private let mockTask: MockTask!
     
     // SHAK: Initializers
     init(data: Data?, urlResponse: URLResponse?, error: Error?) {
