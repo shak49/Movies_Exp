@@ -16,6 +16,7 @@
 		6D633A73273077DC00EAC81C /* Movies_ExpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D633A72273077DC00EAC81C /* Movies_ExpTests.swift */; };
 		6D633A7E2730792C00EAC81C /* APIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D633A7D2730792C00EAC81C /* APIRepository.swift */; };
 		6D633A81273079A200EAC81C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D633A80273079A200EAC81C /* Movie.swift */; };
+		6D633A8327307BD100EAC81C /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D633A8227307BD100EAC81C /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		6D633A72273077DC00EAC81C /* Movies_ExpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies_ExpTests.swift; sourceTree = "<group>"; };
 		6D633A7D2730792C00EAC81C /* APIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepository.swift; sourceTree = "<group>"; };
 		6D633A80273079A200EAC81C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		6D633A8227307BD100EAC81C /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				6D633A7D2730792C00EAC81C /* APIRepository.swift */,
+				6D633A8227307BD100EAC81C /* MockURLSession.swift */,
 			);
 			path = "Helpers & Extensions";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D633A8327307BD100EAC81C /* MockURLSession.swift in Sources */,
 				6D633A7E2730792C00EAC81C /* APIRepository.swift in Sources */,
 				6D633A5D273076D600EAC81C /* ViewController.swift in Sources */,
 				6D633A59273076D600EAC81C /* AppDelegate.swift in Sources */,

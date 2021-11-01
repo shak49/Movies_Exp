@@ -19,7 +19,11 @@ class Movies_ExpTests: XCTestCase {
 
     func testGetMoviesWithExpectedURLHostAndPath() {
         let apiRespository = APIRepository()
+        let mockURLSession = MockURLSession()
+        apiRespository.session = mockURLSession
         apiRespository.getMovies { movies, error in  }
+        XCTAssertEqual(mockURLSession.cachedURL?.host, "mymovieslist.com")
+        XCTAssertEqual(mockURLSession.cachedURL?.path, "/topmovies")
     }
 
 }
