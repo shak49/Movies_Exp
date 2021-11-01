@@ -25,5 +25,20 @@ class Movies_ExpTests: XCTestCase {
         XCTAssertEqual(mockURLSession.cachedURL?.host, "mymovieslist.com")
         XCTAssertEqual(mockURLSession.cachedURL?.path, "/topmovies")
     }
+    
+    func testGetMoviesSuccessReturnsMovies() {
+      let apiRespository = APIRepository()
+      let mockURLSession  = MockURLSession()
+      apiRespository.session = mockURLSession
+      let moviesExpectation = expectation(description: "movies")
+      var moviesResponse: [Movie]?
+      apiRespository.getMovies { (movies, error) in
+        moviesResponse = movies
+        moviesExpectation.fulfill()
+      }
+      waitForExpectations(timeout: 1) { (error) in
+        XCTAssertNotNil(moviesResponse)
+      }
+    }
 
 }
